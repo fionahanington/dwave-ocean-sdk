@@ -44,6 +44,13 @@ The |cloud_tm| quantum cloud service provides real-time cloud access to
         Reference documentation for the :term:`Solver API <SAPI>` (SAPI)
         REST interface.
 
+    .. grid-item-card:: Leap Service Architecture 
+        :img-top: /_images/release_notes_icon.svg
+        :link: https://docs.dwavequantum.com/projects/leap_sapi/en/latest/index.html
+        :link-type: url
+
+        Leap service architecture and data flow.
+
     .. grid-item-card:: Leap Service Release Notes
         :img-top: /_images/release_notes_icon.svg
         :link: https://docs.dwavequantum.com/projects/leap_sapi/en/latest/index.html
