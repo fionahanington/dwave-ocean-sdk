@@ -46,7 +46,7 @@ The |cloud_tm| quantum cloud service provides real-time cloud access to
 
     .. grid-item-card:: Leap Service Architecture 
         :img-top: /_images/release_notes_icon.svg
-        :link: https://docs.dwavequantum.com/projects/leap_sapi/en/latest/index.html
+        :link: leap_architecture
         :link-type: url
 
         Leap service architecture and data flow.
