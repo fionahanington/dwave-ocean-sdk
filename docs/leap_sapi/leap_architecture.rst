@@ -344,15 +344,30 @@ Leap service and the internal handling and storage of this data.
 Problem Formulations  
 --------------------
 
-Problems for the QPU and hybrid solvers are formulated as mathematical models that take the
-following form:
+Problems for the QPU and hybrid solvers are formulated as mathematical models like the following:
 
-Minimize an objective:
+.. math::
 
+    \begin{align}
+        \text{Minimize an objective:} & \\
+        & \sum_{i} a_i x_i + \sum_{i \le j} b_{ij} x_i x_j + c, \\
+        \text{Subject to constraints:} & \\
+        & \sum_i a_i^{(m)} x_i + \sum_{i \le j} b_{ij}^{(m)} x_i x_j+ c^{(m)} \circ 0,
+        \quad m=1, \dots, M,
+    \end{align}
 
-Subject to constraints:
+where :math:`\{ x_i\}_{i=1, \dots, N}` can be binary\ [#]_, integer, or
+continuous\ [#]_ variables, :math:`a_{i}, b_{ij}, c` are real values,
+:math:`\circ \in \{ \ge, \le, = \}` and  :math:`M` is the total number of
+constraints.
 
+.. [#]
+    For binary variables, the range of the quadratic-term summation is
+    :math:`i < j` because :math:`x^2 = x` for binary values :math:`\{0, 1\}`
+    and :math:`s^2 = 1` for spin values :math:`\{-1, 1\}`.
 
+.. [#]
+    Real-valued variables are currently not supported in quadratic interactions.
 
 Different solvers support different variations of the model above, but all models consist of
 coefficients pulled or derived from data and variables that represent the quantities that are being
